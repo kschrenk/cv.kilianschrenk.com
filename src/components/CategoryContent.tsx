@@ -11,7 +11,7 @@ function CategoryContent ({ content } : CCP) {
     return <div>{content.map(item => {
             return <div className={classes.categoryItem}>
                 <h3>{item.jobTitle}</h3>
-                <div>{item.company}, {item.location}</div>
+                <div>{item.company}{item.location && `, ${item.location}`}</div>
             </div>
         })}</div>
 }

@@ -47,7 +47,16 @@ function App() {
           location: 'Herzogenaurach',
         },
       ]
-    }
+    },
+    {
+      title: 'Bildung',
+      content: [
+        {
+          jobTitle: 'Fullstack Web Developer Nanodegree Programm',
+          company: 'Udacity.com',
+        },
+      ]
+    },
   ]
 
   return (
