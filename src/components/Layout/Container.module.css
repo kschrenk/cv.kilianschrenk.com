@@ -1,4 +1,12 @@
-.wrapper {
+.mw80 {
     max-width: 960px;
     margin: 0 auto;
+}
+
+.mw100 {
+    max-width: 100%;
+}
+
+.vh100 {
+    height: 100vH;
 }

@@ -5,8 +5,12 @@ import Body from './components/Body';
 import CategoryMapper from './components/CategoryMapper';
 import CategoryObj from './models/CategoryObj';
 import Container from './components/Layout/Container';
+import { useState } from 'react';
+import PdfViewer from './components/Pdf/PdfViewer';
 
 function App() {
+  const [pdfView, setPdfView] = useState(false);
+
   const cvObj: CategoryObj[] = [
     {
       title: 'Berufserfahrung',
@@ -60,15 +64,23 @@ function App() {
   ]
 
   return (
-    <Container>
-      <div className="App">
-        <h1>Lebenslauf</h1>
-        <Header></Header>
-        <Body>
-          <CategoryMapper categoryList={cvObj} />
-        </Body>
-      </div>
-    </Container>
+    <>
+      <button type="button" onClick={() => setPdfView(!pdfView)} style={{display: 'block'}}>Toggle Pdf</button>
+      {!pdfView 
+        ? <Container>
+            <div className="App">
+              <h1>Lebenslauf</h1>
+              <Header></Header>
+              <Body>
+                <CategoryMapper categoryList={cvObj} />
+              </Body>
+            </div>
+          </Container>
+        : <Container pdfView={pdfView}>
+            <PdfViewer />
+          </Container>
+      }
+    </>
   );
 }
 
