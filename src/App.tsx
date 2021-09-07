@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import classes from './App.module.css';
 import Header from './components/Header';
 import Body from './components/Body';
 import CategoryMapper from './components/CategoryMapper';
@@ -65,10 +65,12 @@ function App() {
 
   return (
     <>
-      <button type="button" onClick={() => setPdfView(!pdfView)} style={{display: 'block'}}>Toggle Pdf</button>
+      <nav className={classes.Nav}>
+        <button type="button" onClick={() => setPdfView(!pdfView)} className={classes.PdfToggle}>Toggle Pdf</button>
+      </nav>
       {!pdfView 
         ? <Container>
-            <div className="App">
+            <div className={classes.App}>
               <h1>Lebenslauf</h1>
               <Header></Header>
               <Body>
@@ -77,7 +79,7 @@ function App() {
             </div>
           </Container>
         : <Container pdfView={pdfView}>
-            <PdfViewer />
+            <PdfViewer categoryList={cvObj}/>
           </Container>
       }
     </>

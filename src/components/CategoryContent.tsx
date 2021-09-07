@@ -5,11 +5,9 @@ interface CCP {
     content: CategoryContentObj[];
 }
 
-function CategoryContent ({ content } : CCP) {
-    console.log(content);
-    
-    return <div>{content.map(item => {
-            return <div className={classes.categoryItem}>
+function CategoryContent ({ content } : CCP) {    
+    return <div>{content.map((item, index) => {
+            return <div key={`cc-${index}`} className={classes.categoryItem}>
                 <h3>{item.jobTitle}</h3>
                 <div>{item.company}{item.location && `, ${item.location}`}</div>
             </div>

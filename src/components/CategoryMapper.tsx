@@ -9,8 +9,8 @@ interface CategoryMapperProps {
 function CategoryMapper ({ categoryList }: CategoryMapperProps ) {
     return <div>
         <p>CategoryMapper</p>
-        {categoryList.map(category => {
-            return <div className={ classes.category }>
+        {categoryList.map((category, index) => {
+            return <div key={`c-${index}`} className={ classes.category }>
                 <h2>{category.title}</h2>
                 <CategoryContent content={category.content} />
             </div>;
