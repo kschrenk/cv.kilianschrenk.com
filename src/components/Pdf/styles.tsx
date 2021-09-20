@@ -66,14 +66,14 @@ Font.register({
     family: 'Roboto',
     fonts: [
         {
-            src: 'http://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf'
+            src: "../../assets/fonts/Roboto-Regular.ttf"
         },
         {
-            src: 'https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlvAx05IsDqlA.ttf',
+            src: '../../assets/fonts/Roboto-Bold.ttf',
             fontWeight: 'bold',
         }, 
         {
-            src: 'http://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5vAx05IsDqlA.ttf',
+            src: '../../assets/fonts/Roboto-Light.ttf',
             fontWeight: 'light'
         }
     ]
