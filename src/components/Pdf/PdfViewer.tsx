@@ -1,36 +1,39 @@
-import { PDFViewer, Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { PDFViewer, Document, Page, Text, View} from '@react-pdf/renderer';
 import CategoryObj from '../../models/CategoryObj';
+import styles from './styles';
 
 interface pdfViewerProps {
     categoryList: CategoryObj[];
 }
-
-const styles = StyleSheet.create({
-    page: {
-        paddingTop: 45,
-        paddingBottom: 65,
-        paddingLeft: 45,
-        paddingRight: 35,
-    },
-    section: {
-        fontSize: 12,
-        marginBottom: 12,
-    }
-  });
 
 function PdfViewer({categoryList}: pdfViewerProps) {
     return (
         <PDFViewer width="100%" height="100%">
             <Document>
                 <Page style={styles.page}>
-                    <Text style={styles.section}>Header</Text>
+                    <Text style={styles.section}>Lebenslauf</Text>
+                    <View style={ {...styles.row, ...styles.bgPrimary, ...styles.py2} }>
+                        <View style={styles.col4}>
+                            <Text>Image</Text>
+                        </View>
+                        <View>
+                            <View style={{...styles.mb1}}>
+                                <Text style={{...styles.fontBold }}>Kilian Schrenk</Text>
+                                <Text style={{...styles.fontNormal}}>Web-Entwickler</Text>
+                            </View>
+                            <View style={{...styles.fontLight, ...styles.fontSmall}}>
+                                <Text>kilianschrenk.com</Text>
+                                <Text>kilian.schrenk@gmail.com</Text>
+                            </View>
+                        </View>
+                    </View>
                     {categoryList.map((category, index) => {
                         return(
                             <View key={`pdf-${index}`} style={styles.section}>
-                                <Text>{category.title}</Text>
+                                <Text style={{ ...styles.my2, ...styles.fontBold }}>{category.title}</Text>
                                 {category.content.map((item, index) => {
                                     return (
-                                        <View style={styles.section} key={`pdf-item-${index}`}>
+                                        <View style={{...styles.section, ...styles.borderLeft}} key={`pdf-item-${index}`}>
                                             <Text>{item.jobTitle}</Text>
                                             <Text>{item.company}</Text>
                                             <Text>{item.location}</Text>
