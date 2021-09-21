@@ -1,6 +1,7 @@
 import { PDFViewer, Document, Page, Text, View} from '@react-pdf/renderer';
 import CategoryObj from '../../models/CategoryObj';
 import styles from './styles';
+import BulletPoint from './BulletPoint/BulletPoint';
 
 interface pdfViewerProps {
     categoryList: CategoryObj[];
@@ -17,7 +18,7 @@ function PdfViewer({categoryList}: pdfViewerProps) {
                             <Text>Image</Text>
                         </View>
                         <View>
-                            <View style={{...styles.mb1}}>
+                            <View style={{...styles.mb2}}>
                                 <Text style={{...styles.fontBold }}>Kilian Schrenk</Text>
                                 <Text style={{...styles.fontNormal}}>Web-Entwickler</Text>
                             </View>
@@ -37,11 +38,19 @@ function PdfViewer({categoryList}: pdfViewerProps) {
                                             <View style={{...styles.section, ...styles.row, ...styles.flexDirRow, ...styles.fontSmall}} key={`pdf-item-${index}`}>
                                                 <View style={{...styles.col4}}>
                                                     <View style={{...styles.row, ...styles.flexDirRow}}>
-                                                        <Text>{`${item.company}, `}</Text><Text>{item.location}</Text>
+                                                        <Text>{item.company}</Text><Text>{item.location && `, ${item.location}`}</Text>
                                                     </View>
                                                 </View>
-                                                <View>
-                                                    <Text style={{...styles.fontBold}}>{item.jobTitle}</Text>
+                                                <View style={{...styles.col6}}>
+                                                    <Text style={{...styles.fontMedium, ...styles.mb2}}>{item.jobTitle}</Text>
+                                                    {item.description && item.description.map((listItem, index) => {
+                                                        return (
+                                                            <View style={{...styles.flexDirRow, ...styles.mb1}} key={`d-${index}-${item.company}`}>
+                                                                {item.bullets && <BulletPoint key={`bp-${index}-${item.company}`}/>}
+                                                                <Text style={{...styles.fontLight, ...styles.typoLight}}>{listItem}</Text>
+                                                            </View>
+                                                        );
+                                                    })}
                                                 </View>
                                             </View>
                                         );

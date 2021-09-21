@@ -5,6 +5,8 @@ import Roboto from '../../assets/fonts/Roboto-Regular.ttf';
 import RobotoBold from '../../assets/fonts/Roboto-Bold.ttf';
 // @ts-ignore
 import RobotoLight from '../../assets/fonts/Roboto-Light.ttf';
+// @ts-ignore
+import RobotoMedium from '../../assets/fonts/Roboto-Medium.ttf';
 
 const styles = StyleSheet.create({
     page: {
@@ -49,6 +51,10 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
         fontWeight: 'light',
     },
+    fontMedium: {
+        fontFamily: 'Roboto',
+        fontWeight: 'medium',
+    },
     fontBold: {
         fontFamily: 'Roboto',
         fontWeight: 'bold',
@@ -57,10 +63,19 @@ const styles = StyleSheet.create({
         fontSize: 12,
     },
     fontSmall: {
-        fontSize: 11,
+        fontSize: 10,
+    },
+    typoLight: {
+        lineHeight: 1.4,
     },
     mb1: {
+        marginBottom: 4,
+    },
+    mb2: {
         marginBottom: 8,
+    },
+    mt1: {
+        marginTop: 4,
     },
     my2: {
         marginTop: 16,
@@ -69,6 +84,12 @@ const styles = StyleSheet.create({
     py2: {
         paddingTop: 32,
         paddingBottom: 32,
+    },
+    pr1: {
+        paddingRight: 8,
+    },
+    pt1: {
+        paddingRight: 8,
     }
 });
 
@@ -83,7 +104,11 @@ Font.register({
         {
             src: RobotoBold,
             fontWeight: 'bold',
-        }, 
+        },
+        {
+            src: RobotoMedium,
+            fontWeight: 'medium',
+        },  
         {
             src: RobotoLight,
             fontWeight: 'light'
