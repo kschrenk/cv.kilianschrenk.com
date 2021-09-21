@@ -1,4 +1,10 @@
 import { StyleSheet, Font } from '@react-pdf/renderer';
+// @ts-ignore
+import Roboto from '../../assets/fonts/Roboto-Regular.ttf';
+// @ts-ignore
+import RobotoBold from '../../assets/fonts/Roboto-Bold.ttf';
+// @ts-ignore
+import RobotoLight from '../../assets/fonts/Roboto-Light.ttf';
 
 const styles = StyleSheet.create({
     page: {
@@ -66,14 +72,14 @@ Font.register({
     family: 'Roboto',
     fonts: [
         {
-            src: "../../assets/fonts/Roboto-Regular.ttf"
+            src: Roboto,
         },
         {
-            src: '../../assets/fonts/Roboto-Bold.ttf',
+            src: RobotoBold,
             fontWeight: 'bold',
         }, 
         {
-            src: '../../assets/fonts/Roboto-Light.ttf',
+            src: RobotoLight,
             fontWeight: 'light'
         }
     ]
