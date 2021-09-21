@@ -20,12 +20,18 @@ const styles = StyleSheet.create({
     },
     row: {
         display: "flex",
+    },
+    flexDirRow: {
         flexDirection: "row",
-        borderTop: "1px solid orange"
+    },
+    flexDirCol: {
+        flexDirection: "column",
     },
     borderLeft: {
         borderLeft: "1px solid orange",
-        paddingLeft: 14,
+    },
+    borderTop: {
+        borderTop: "1px solid orange",
     },
     col6: {
         width: "50%",
