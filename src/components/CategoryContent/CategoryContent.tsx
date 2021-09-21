@@ -1,4 +1,4 @@
-import CategoryContentObj from '../models/CategoryContentObj';
+import CategoryContentObj from '../../models/CategoryContentObj';
 import classes from './CategoryContent.module.css';
 
 interface CCP {

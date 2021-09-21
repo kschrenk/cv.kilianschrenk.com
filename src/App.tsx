@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './App.module.css';
-import Header from './components/Header';
-import Body from './components/Body';
-import CategoryMapper from './components/CategoryMapper';
+import Header from './components/Header/Header';
+import Body from './components/Body/Body';
+import CategoryMapper from './components/CategoryMapper/CategoryMapper';
 import CategoryObj from './models/CategoryObj';
 import Container from './components/Layout/Container';
 import { useState } from 'react';
