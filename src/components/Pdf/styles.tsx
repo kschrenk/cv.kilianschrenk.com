@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
         fontFamily: "Roboto",
     },
     section: {
-        fontSize: 12,
         marginBottom: 12,
     },
     row: {
@@ -59,6 +58,9 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
         fontWeight: 'bold',
     },
+    fontLarge: {
+        fontSize: 13,
+    },
     fontNormal: {
         fontSize: 12,
     },
@@ -68,11 +70,17 @@ const styles = StyleSheet.create({
     typoLight: {
         lineHeight: 1.4,
     },
+    mb0: {
+        marginBottom: 0,
+    },
     mb1: {
         marginBottom: 4,
     },
     mb2: {
         marginBottom: 8,
+    },
+    mb3: {
+        marginBottom: 12,
     },
     mt1: {
         marginTop: 4,
@@ -80,6 +88,9 @@ const styles = StyleSheet.create({
     my2: {
         marginTop: 16,
         marginBottom: 16,
+    },
+    pb0: {
+        paddingBottom: 0,
     },
     py2: {
         paddingTop: 32,

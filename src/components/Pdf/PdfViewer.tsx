@@ -2,8 +2,9 @@ import { PDFViewer, Document, Page, Text, View} from '@react-pdf/renderer';
 import CategoryObj from '../../models/CategoryObj';
 import styles from './styles';
 import BulletPoint from './BulletPoint/BulletPoint';
+import CategoryContentObj from '../../models/CategoryContentObj';
 
-interface pdfViewerProps {
+type pdfViewerProps = {
     categoryList: CategoryObj[];
 }
 
@@ -29,13 +30,21 @@ function PdfViewer({categoryList}: pdfViewerProps) {
                         </View>
                     </View>
                     {categoryList.map((category, index) => {
-                        return(
-                            <View key={`pdf-${index}`} style={styles.section}>
-                                <Text style={{ ...styles.my2, ...styles.fontBold }}>{category.title}</Text>
+                        const categoryContentLength = calculateArrayLength(category.content);
+                        return (
+                            <View key={`pdf-${index}`} style={styles.mb3}>
+                                <Text style={{ ...styles.my2, ...styles.fontBold, ...styles.fontLarge }}>{category.title}</Text>
                                 <View style={{...styles.borderLeft}}>
                                     {category.content.map((item, index) => {
+                                        const itemDescriptionLength = item.description ? calculateArrayLength(item.description) : 0;                                        
+                                        const isLastContentItem: boolean = isLast(categoryContentLength, index);
+                                        let contentStyle = {...styles.row, ...styles.flexDirRow, ...styles.fontSmall}
+                                        if(!isLastContentItem) {
+                                            contentStyle = {...contentStyle, ...styles.mb3}
+                                        }
+                                        
                                         return (
-                                            <View style={{...styles.section, ...styles.row, ...styles.flexDirRow, ...styles.fontSmall}} key={`pdf-item-${index}`}>
+                                            <View style={contentStyle} key={`pdf-item-${index}`}>
                                                 <View style={{...styles.col4}}>
                                                     <View style={{...styles.row, ...styles.flexDirRow}}>
                                                         <Text>{item.company}</Text><Text>{item.location && `, ${item.location}`}</Text>
@@ -44,8 +53,14 @@ function PdfViewer({categoryList}: pdfViewerProps) {
                                                 <View style={{...styles.col6}}>
                                                     <Text style={{...styles.fontMedium, ...styles.mb2}}>{item.jobTitle}</Text>
                                                     {item.description && item.description.map((listItem, index) => {
+                                                        const isLastDescriptionItem = isLast(itemDescriptionLength, index);  
+                                                        let descriptionStyle = {...styles.flexDirRow}
+                                                        if(!isLastDescriptionItem) {
+                                                            descriptionStyle = {...descriptionStyle, ...styles.mb1}
+                                                        }
+
                                                         return (
-                                                            <View style={{...styles.flexDirRow, ...styles.mb1}} key={`d-${index}-${item.company}`}>
+                                                            <View style={descriptionStyle} key={`d-${index}-${item.company}`}>
                                                                 {item.bullets && <BulletPoint key={`bp-${index}-${item.company}`}/>}
                                                                 <Text style={{...styles.fontLight, ...styles.typoLight}}>{listItem}</Text>
                                                             </View>
@@ -64,5 +79,13 @@ function PdfViewer({categoryList}: pdfViewerProps) {
         </PDFViewer>
     );
 };
+
+export function calculateArrayLength(array: string[] | CategoryContentObj[]): number {
+    return array.length
+}
+
+export function isLast(length: number, index: number): boolean {
+    return (length - 1) === index;
+}
 
 export default PdfViewer;
