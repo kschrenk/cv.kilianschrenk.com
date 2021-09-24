@@ -3,18 +3,21 @@ import CategoryObj from '../../models/CategoryObj';
 import styles from './styles';
 import BulletPoint from './BulletPoint/BulletPoint';
 import CategoryContentObj from '../../models/CategoryContentObj';
+import CustomDate from '../../models/CustomDate';
 
 type pdfViewerProps = {
     categoryList: CategoryObj[];
 }
 
 function PdfViewer({categoryList}: pdfViewerProps) {
+    const now = new CustomDate(new Date());
+
     return (
         <PDFViewer width="100%" height="100%">
-            <Document>
+            <Document title={`CV_KilianSchrenk_${now.toString()}`} language={'de'}>
                 <Page style={styles.page}>
                     <Text style={styles.section}>Lebenslauf</Text>
-                    <View style={ {...styles.row, ...styles.bgPrimary, ...styles.py2, ...styles.borderTop, ...styles.flexDirRow} }>
+                    <View style={ {...styles.row, ...styles.bgPrimary, ...styles.py2, ...styles.borderTop, ...styles.flexDirRow, ...styles.mb2} }>
                         <View style={styles.col4}>
                             <Text>Image</Text>
                         </View>
@@ -34,7 +37,7 @@ function PdfViewer({categoryList}: pdfViewerProps) {
                         return (
                             <View key={`pdf-${index}`} style={styles.mb3}>
                                 <Text style={{ ...styles.my2, ...styles.fontBold, ...styles.fontLarge }}>{category.title}</Text>
-                                <View style={{...styles.borderLeft}}>
+                                <View>
                                     {category.content.map((item, index) => {
                                         const itemDescriptionLength = item.description ? calculateArrayLength(item.description) : 0;                                        
                                         const isLastContentItem: boolean = isLast(categoryContentLength, index);
@@ -44,7 +47,7 @@ function PdfViewer({categoryList}: pdfViewerProps) {
                                         }
                                         
                                         return (
-                                            <View style={contentStyle} key={`pdf-item-${index}`}>
+                                            <View style={contentStyle} key={`pdf-item-${index}`} wrap={false}>
                                                 <View style={{...styles.col4}}>
                                                     <View style={{...styles.row, ...styles.flexDirRow}}>
                                                         <Text>{item.company}</Text><Text>{item.location && `, ${item.location}`}</Text>

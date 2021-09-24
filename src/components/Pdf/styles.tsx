@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     page: {
         paddingTop: 45,
         paddingBottom: 65,
-        paddingLeft: 45,
-        paddingRight: 35,
+        paddingLeft: 42,
+        paddingRight: 42,
         fontFamily: "Roboto",
     },
     section: {
@@ -77,10 +77,10 @@ const styles = StyleSheet.create({
         marginBottom: 4,
     },
     mb2: {
-        marginBottom: 8,
+        marginBottom: 6,
     },
     mb3: {
-        marginBottom: 12,
+        marginBottom: 22,
     },
     mt1: {
         marginTop: 4,
