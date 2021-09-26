@@ -4,4 +4,5 @@ export default interface CategoryContentObj {
     location?: string;
     description?: string[];
     bullets: boolean;
+    type?: 'codingLanguage';
 }

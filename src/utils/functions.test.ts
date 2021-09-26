@@ -1,5 +1,5 @@
-import {calculateArrayLength, isLast} from '../PdfViewer';
-import {cvObj} from '../../../App';
+import {calculateArrayLength, isLast} from './functions';
+import {cvObj} from '../App';
 
 it('calculates the correct length of array with strings', () => {
     const list = ['string1', 'string2', 'string3'];
@@ -9,6 +9,10 @@ it('calculates the correct length of array with strings', () => {
 it('calculates the correct length of array with objects', () => {
     const categoryContentObj = [...cvObj[0]['content']];
     expect(calculateArrayLength(categoryContentObj)).toEqual(4);
+})
+
+it('returns cero when array is empty', () => {
+    expect(calculateArrayLength([])).toBe(0);
 })
 
 it('returns true when last item', () => {
