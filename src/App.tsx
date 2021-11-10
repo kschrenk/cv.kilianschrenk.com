@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './App.module.css';
 import Header from './components/Header/Header';
 import Body from './components/Body/Body';
@@ -7,10 +6,13 @@ import CategoryObj from './models/CategoryObj';
 import Container from './components/Layout/Container';
 import { useState } from 'react';
 import PdfViewer from './components/Pdf/PdfViewer';
+import AppContextProvider from './store/AppContextProvider';
+import CategoryFilter from './components/CategoryFilter/CategoryFilter';
 
 export const cvObj: CategoryObj[] = [
     {
         title: 'Berufserfahrung',
+        category: 'experience',
         content: [
         {
             jobTitle: 'Web-Entwickler',
@@ -56,6 +58,7 @@ export const cvObj: CategoryObj[] = [
     },
     {
         title: 'Praktika',
+        category: 'internship',
         content: [
             {
                 jobTitle: 'Praktikant im Eventmarketing',
@@ -81,6 +84,7 @@ export const cvObj: CategoryObj[] = [
     },
     {
         title: 'Bildung',
+        category: 'education',
         content: [
             {
                 jobTitle: 'Fullstack Web Developer Nanodegree Programm',
@@ -120,6 +124,7 @@ export const cvObj: CategoryObj[] = [
     },
     {
         title: 'Zertifikate',
+        category: 'certificate',
         content: [
             {
                 jobTitle: 'Technical-SEO-Seminar',
@@ -155,29 +160,32 @@ export const cvObj: CategoryObj[] = [
 ]
 
 function App() {
-  const [pdfView, setPdfView] = useState(false);
+    const [pdfView, setPdfView] = useState(false);
 
-  return (
-    <>
-      <nav className={classes.Nav}>
-        <button type="button" onClick={() => setPdfView(!pdfView)} className={classes.PdfToggle}>Toggle Pdf</button>
-      </nav>
-      {!pdfView 
-        ? <Container>
-            <div className={classes.App}>
-              <h1>Lebenslauf</h1>
-              <Header></Header>
-              <Body>
-                <CategoryMapper categoryList={cvObj} />
-              </Body>
-            </div>
-          </Container>
-        : <Container pdfView={pdfView}>
-            <PdfViewer categories={cvObj}/>
-          </Container>
-      }
-    </>
-  );
+    return (
+        <>
+            <AppContextProvider>
+                <nav className={classes.Nav}>
+                    <button type="button" onClick={() => setPdfView(!pdfView)} className={classes.PdfToggle}>Toggle Pdf</button>
+                    <CategoryFilter />
+                </nav>
+                {!pdfView 
+                    ? <Container>
+                        <div className={classes.App}>
+                        <h1>Lebenslauf</h1>
+                        <Header></Header>
+                        <Body>
+                            <CategoryMapper categoryList={cvObj} />
+                        </Body>
+                        </div>
+                    </Container>
+                    : <Container pdfView={pdfView}>
+                        <PdfViewer categories={cvObj}/>
+                    </Container>
+                }
+            </AppContextProvider >
+        </>
+    );
 }
 
 export default App;
