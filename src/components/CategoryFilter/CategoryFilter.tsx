@@ -15,7 +15,8 @@ const CategoryFilter: React.FC = () => {
     }
 
     return (
-        <div>
+        <details>
+            <summary>Filter categories</summary>
             <label>
                 <input type="checkbox" value={'experience'} checked={appCTX.isActive('experience')} onChange={selectCategoryHandler}></input>
                 Berufserfahrung
@@ -32,7 +33,7 @@ const CategoryFilter: React.FC = () => {
                 <input type="checkbox" value={'certificate'} checked={appCTX.isActive('certificate')} onChange={selectCategoryHandler}></input>
                 Zertifikate
             </label>
-        </div>
+        </details>
     )
 }
 

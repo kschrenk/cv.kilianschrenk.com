@@ -1,6 +1,3 @@
-import classes from './App.module.css';
-import Header from './components/Header/Header';
-import Body from './components/Body/Body';
 import CategoryMapper from './components/CategoryMapper/CategoryMapper';
 import CategoryObj from './models/CategoryObj';
 import Container from './components/Layout/Container';
@@ -165,20 +162,17 @@ function App() {
     return (
         <>
             <AppContextProvider>
-                <nav className={classes.Nav}>
-                    <button type="button" onClick={() => setPdfView(!pdfView)} className={classes.PdfToggle}>Toggle Pdf</button>
-                    <CategoryFilter />
-                </nav>
+                <header>
+                    <h1>Lebenslauf</h1>
+                    <nav>
+                        <button type="button" onClick={() => setPdfView(!pdfView)}>Toggle Pdf</button>
+                        <CategoryFilter />
+                    </nav>
+                </header>
                 {!pdfView 
-                    ? <Container>
-                        <div className={classes.App}>
-                        <h1>Lebenslauf</h1>
-                        <Header></Header>
-                        <Body>
+                    ? <main>
                             <CategoryMapper categoryList={cvObj} />
-                        </Body>
-                        </div>
-                    </Container>
+                    </main>
                     : <Container pdfView={pdfView}>
                         <PdfViewer categories={cvObj}/>
                     </Container>
