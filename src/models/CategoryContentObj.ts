@@ -5,4 +5,5 @@ export default interface CategoryContentObj {
     description?: string[];
     bullets: boolean;
     type?: 'codingLanguage';
+    dateString: string;
 }
