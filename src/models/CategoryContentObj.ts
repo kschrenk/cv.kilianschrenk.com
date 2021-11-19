@@ -6,4 +6,6 @@ export default interface CategoryContentObj {
     bullets: boolean;
     type?: 'codingLanguage';
     dateString: string;
+    imageName?: string;
+    link?: string;
 }

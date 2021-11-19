@@ -11,10 +11,12 @@ export const cvObj: CategoryObj[] = [
             location: 'München',
             bullets: true,
             dateString: '09.2020 - heute',
+            imageName: 'sblum',
+            link: 'https://sblum.de',
             description: [
                 'Web-Anwendungen auf Basis von Symfony und PHP', 
                 'User-Interfaces mit React',
-            ]
+            ],
         },
         {
             jobTitle: 'Web-Entwickler im Online-Marketing',
@@ -22,6 +24,8 @@ export const cvObj: CategoryObj[] = [
             location: 'München',
             bullets: true,
             dateString: '01.2019 - 09.2020',
+            imageName: 'sz',
+            link: 'https://www.sueddeutsche.de/',
             description: [
             'Entwicklung von Landingpages (CTRs bis zu 35%) mit HTML, CSS, Javascript und Grunt in Wordpress',
             'Deployment u.a. auf WPEngine mit Git Remote',
@@ -36,6 +40,8 @@ export const cvObj: CategoryObj[] = [
             location: 'Bamberg',
             bullets: true,
             dateString: '04.2018 - 02.2018',
+            imageName: 'drpfleger',
+            link: 'https://dr-pfleger.de/',
             description: [
             'Etablierung interner, digitaler Workflows zur fortlaufenden Content-Pflege',
             'Einarbeitung der Mitarbeiter in Typo3 „Neos“',
@@ -48,6 +54,8 @@ export const cvObj: CategoryObj[] = [
             location: 'Bamberg',
             bullets: true,
             dateString: '01.2017 - 02.2018',
+            imageName: 'ks',
+            link: 'https://kilianschrenk.com/',
             description: [
             'Content-Produktion (Video, Bild und Text) für den Social- Media-Kanal der Boulderlounge in Chemnitz', 
             'Webseiten-Erstellung in Wordpress u.a. für das Chinesische Filmfestival in Bamberg',
@@ -65,9 +73,11 @@ export const cvObj: CategoryObj[] = [
                 location: 'München',
                 bullets: true,
                 dateString: '03.2016 - 08.2016',
+                imageName: 'salewa',
+                link: 'https://www.oberalp.com/de',
                 description: [
-                'Projektleitung der SALEWA Markenkampagne „Get vertical“',
-                'Organisation der Get-Vertical-Events in Frankreich, Italien, Schweiz und Österreich',
+                    'Projektleitung der SALEWA Markenkampagne „Get vertical“',
+                    'Organisation der Get-Vertical-Events in Frankreich, Italien, Schweiz und Österreich',
                 ]
             },
             {
@@ -76,9 +86,11 @@ export const cvObj: CategoryObj[] = [
                 location: 'Herzogenaurach',
                 bullets: true,
                 dateString: '09.2015 - 02.2016',
+                imageName: 'adidas',
+                link: 'https://adidas.de/',
                 description: [
-                'Pressekontakt und Erstellung von Pressematerialien',
-                'Organisation des lokalen PR-Events bei adidas Rockstars in Stuttgart'
+                    'Pressekontakt und Erstellung von Pressematerialien',
+                    'Organisation des lokalen PR-Events bei adidas Rockstars in Stuttgart'
                 ]
             },
         ]

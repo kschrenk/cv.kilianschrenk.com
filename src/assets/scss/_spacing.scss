@@ -30,6 +30,14 @@
   margin-bottom: 2rem;
 }
 
+.mt0 {
+  margin-top: 0;
+}
+
+.mr5  {
+  margin-right: 1rem;
+}
+
 // -------------------------------------- //
 // Padding
 // -------------------------------------- //
@@ -61,7 +69,27 @@
   padding-right: 0.8rem;
 }
 
+.px5 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .my0 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.my2 {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.my4 {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.my5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
