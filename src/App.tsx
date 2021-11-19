@@ -1,12 +1,18 @@
 import CategoryMapper from './components/CategoryMapper/CategoryMapper';
 import Container from './components/Layout/Container';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PdfViewer from './components/Pdf/PdfViewer';
 import {cvObj} from './constants/index';
 import ThemeContextProvider from './store/ThemeContextProvider';
+import CategoryObj from './models/CategoryObj';
 
 function App() {
     const [pdfView, setPdfView] = useState(false);
+    const [curriculum, setCurriculum] = useState<CategoryObj[]>();
+
+    useEffect(() => {
+        setCurriculum(cvObj);
+    }, [])
 
     return (
         <ThemeContextProvider>
@@ -18,10 +24,12 @@ function App() {
             <div className={'container flex justify-content-end'}>
                 <button className={'btn mt5'} type="button" onClick={() => setPdfView(!pdfView)}>SHOW AS PDF</button>
             </div>
-            {!pdfView 
-                ? <div className={'container'}><CategoryMapper categoryList={cvObj} /></div>
-                : <Container pdfView={pdfView}>
-                    <PdfViewer categories={cvObj}/>
+            {(!pdfView && curriculum) &&
+                 <div className={'container'}><CategoryMapper categoryList={curriculum} /></div>
+            }
+            {(pdfView && curriculum) &&
+                <Container pdfView={pdfView}>
+                    <PdfViewer categories={curriculum}/>
                 </Container>
             }
         </ThemeContextProvider>

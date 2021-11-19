@@ -12,11 +12,11 @@ function CategoryContent ({ content } : CCP) {
         <div>
             {content.map((item, index) => {
                 return (
-                    <div key={`cc-${index}`} className={'border br1 mb10'}>
+                    <div key={`cc-${index}`} className={'border br1 mb10 pb3'}>
                         <div className={'bg-light flex justify-content-end pr4 py1 text-light'}>
                             <span className={'font-small'}>{item.dateString}</span>
                         </div>
-                        <div className={'my5 px5 flex justify-content-space-between align-items-top'}>
+                        <div className={'mt6 mb5 px5 flex justify-content-space-between align-items-top'}>
                             <div className={'pr4'}>
                                 <p className={'mb1 mt0'}><strong>{item.jobTitle}</strong></p>
                                 <p className={'my0 text-light'}>{item.company}{item.location && `, ${item.location}`}</p>
