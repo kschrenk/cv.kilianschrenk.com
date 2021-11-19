@@ -54,8 +54,6 @@ export const cvObj: CategoryObj[] = [
             location: 'Bamberg',
             bullets: true,
             dateString: '01.2017 - 02.2018',
-            imageName: 'ks',
-            link: 'https://kilianschrenk.com/',
             description: [
             'Content-Produktion (Video, Bild und Text) für den Social- Media-Kanal der Boulderlounge in Chemnitz', 
             'Webseiten-Erstellung in Wordpress u.a. für das Chinesische Filmfestival in Bamberg',

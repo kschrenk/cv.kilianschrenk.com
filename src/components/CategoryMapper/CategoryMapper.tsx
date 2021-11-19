@@ -10,7 +10,7 @@ function CategoryMapper ({ categoryList }: CategoryMapperProps ) {
         {categoryList.map((category, index) => {
             return (
                 <div key={`c-${index}`}>
-                    <h2>{category.title}</h2>
+                    <h2 className={index === 0 ? 'mt2' : 'mt5'}>{category.title}</h2>
                     <CategoryContent content={category.content} />
                 </div>
             ); 

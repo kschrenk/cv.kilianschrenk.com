@@ -5,6 +5,12 @@ header {
   text-align: left;
 }
 
+button {
+  @media (prefers-color-scheme: dark) {
+    color: darken(white, 10%);
+  }
+}
+
 h1 {
   color: var(--text-light);
 }
@@ -26,6 +32,9 @@ body {
 
 .text-light {
   color: var(--text-light);
+  @media (prefers-color-scheme: dark) {
+    color: var(--accent);
+  }
 }
 
 .text-accent-light {
@@ -102,6 +111,10 @@ ul {
 
 .filter-gray {
   filter: grayscale(1);
+}
+
+.filter-white {
+  filter: brightness(0) invert(1);
 }
 
 .opacity-low {
