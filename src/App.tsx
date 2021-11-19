@@ -16,7 +16,7 @@ export const cvObj: CategoryObj[] = [
             company: 'sblum GmbH',
             location: 'München',
             bullets: true,
-            dateString: '09/2020 - heute',
+            dateString: '09.2020 - heute',
             description: [
                 'Web-Anwendungen auf Basis von Symfony und PHP', 
                 'User-Interfaces mit React',
@@ -27,7 +27,7 @@ export const cvObj: CategoryObj[] = [
             company: 'Süddeutsche Zeitung',
             location: 'München',
             bullets: true,
-            dateString: '01/2019 - 09/2020',
+            dateString: '01.2019 - 09.2020',
             description: [
             'Entwicklung von Landingpages (CTRs bis zu 35%) mit HTML, CSS, Javascript und Grunt in Wordpress',
             'Deployment u.a. auf WPEngine mit Git Remote',
@@ -41,7 +41,7 @@ export const cvObj: CategoryObj[] = [
             company: 'Dr. Pfleger GmbH',
             location: 'Bamberg',
             bullets: true,
-            dateString: '04/2018 - 02/2018',
+            dateString: '04.2018 - 02.2018',
             description: [
             'Etablierung interner, digitaler Workflows zur fortlaufenden Content-Pflege',
             'Einarbeitung der Mitarbeiter in Typo3 „Neos“',
@@ -53,7 +53,7 @@ export const cvObj: CategoryObj[] = [
             company: 'Freelancer',
             location: 'Bamberg',
             bullets: true,
-            dateString: '01/2017 - 02/2018',
+            dateString: '01.2017 - 02.2018',
             description: [
             'Content-Produktion (Video, Bild und Text) für den Social- Media-Kanal der Boulderlounge in Chemnitz', 
             'Webseiten-Erstellung in Wordpress u.a. für das Chinesische Filmfestival in Bamberg',
@@ -70,7 +70,7 @@ export const cvObj: CategoryObj[] = [
                 company: 'Salewa',
                 location: 'München',
                 bullets: true,
-                dateString: '03/2016 - 08/2016',
+                dateString: '03.2016 - 08.2016',
                 description: [
                 'Projektleitung der SALEWA Markenkampagne „Get vertical“',
                 'Organisation der Get-Vertical-Events in Frankreich, Italien, Schweiz und Österreich',
@@ -81,7 +81,7 @@ export const cvObj: CategoryObj[] = [
                 company: 'adidas Se',
                 location: 'Herzogenaurach',
                 bullets: true,
-                dateString: '09/2015 - 02/2016',
+                dateString: '09.2015 - 02.2016',
                 description: [
                 'Pressekontakt und Erstellung von Pressematerialien',
                 'Organisation des lokalen PR-Events bei adidas Rockstars in Stuttgart'
@@ -97,7 +97,7 @@ export const cvObj: CategoryObj[] = [
                 jobTitle: 'Fullstack Web Developer Nanodegree Programm',
                 company: 'Udacity.com',
                 bullets: true,
-                dateString: '01/2020 - 05/2020',
+                dateString: '01.2020 - 05.2020',
                 description: [
                     'Programmierung von CRUD-Applikationen mit Python Flask und SQL-Alchemy',
                     'Entwicklung von REST-APIs und Authentifizierung',
@@ -108,7 +108,7 @@ export const cvObj: CategoryObj[] = [
                 jobTitle: 'Master of Arts in Kommunikationswissenschaften',
                 company: 'Universität Bamberg',
                 bullets: false,
-                dateString: '01/2015 - 09/2018',
+                dateString: '01.2015 - 09.2018',
                 description: [
                 'Mit dem Schwerpunkt auf Online- Massenkommunikation (Gesamtnote: 1,7)'
                 ]
@@ -117,7 +117,7 @@ export const cvObj: CategoryObj[] = [
                 jobTitle: 'Austauschprogramm in Mexiko Stadt',
                 company: 'Universidad Iberoamericana',
                 bullets: false,
-                dateString: '08/2013 - 05/2014',
+                dateString: '08.2013 - 05.2014',
                 description: [
                 'Auslandsstudium für zwei Semester im Bereich politischer Kommunikation und PR.'
                 ]
@@ -126,7 +126,7 @@ export const cvObj: CategoryObj[] = [
                 jobTitle: 'Bachelor of Arts in Kommunikationswissenschaft',
                 company: 'Universität Bamberg',
                 bullets: false,
-                dateString: '05/2011 - 07/2015',
+                dateString: '05.2011 - 07.2015',
                 description: [
                 'Mit den Nebenfächern BWL und Soziologie.'
                 ]
@@ -184,7 +184,7 @@ function App() {
                     <h1>Lebenslauf</h1>
                     <nav>
                         <button style={{marginRight: '12px'}} type="button" onClick={() => setPdfView(!pdfView)}>Toggle pdf-view</button>
-                        <button type="button" onClick={() => setShowFilter(!showFilter)}>{`${showFilter ? 'Hide' : 'Show'} filter`}</button>
+                        {/* <button type="button" onClick={() => setShowFilter(!showFilter)}>{`${showFilter ? 'Hide' : 'Show'} filter`}</button> */}
                     </nav>
                     {showFilter && <CategoryFilter />}
                 </header>
