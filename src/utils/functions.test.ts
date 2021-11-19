@@ -1,5 +1,5 @@
 import {calculateArrayLength, isLast} from './functions';
-import {cvObj} from '../App';
+import {cvObj} from '../constants/index';
 
 it('calculates the correct length of array with strings', () => {
     const list = ['string1', 'string2', 'string3'];

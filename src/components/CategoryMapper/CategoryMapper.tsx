@@ -1,17 +1,13 @@
 import CategoryObj from "../../models/CategoryObj";
 import CategoryContent from '../CategoryContent/CategoryContent';
-import {useContext} from 'react';
-import {AppContext} from '../../store/AppContextProvider';
 
 type CategoryMapperProps = {
     categoryList: CategoryObj[];
 }
 
 function CategoryMapper ({ categoryList }: CategoryMapperProps ) {
-    const appCTX = useContext(AppContext);
-
     return <div>
-        {categoryList.filter((item => appCTX.isActive(item.category))).map((category, index) => {
+        {categoryList.map((category, index) => {
             return (
                 <div key={`c-${index}`}>
                     <h2>{category.title}</h2>
