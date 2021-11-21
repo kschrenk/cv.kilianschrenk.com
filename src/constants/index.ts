@@ -182,7 +182,7 @@ export const cvObj: CategoryObj[] = [
             },
             {
                 jobTitle: 'Webdesign',
-                company: 'Techn. Hochschule Regensburg',
+                company: 'Techn. Hochschule',
                 bullets: true,
                 dateString: 'WiSe 2017/ 2018',
                 location: 'Regensburg',
