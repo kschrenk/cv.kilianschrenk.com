@@ -14,8 +14,11 @@ export const cvObj: CategoryObj[] = [
             imageName: 'sblum',
             link: 'https://sblum.de',
             description: [
-                'Web-Anwendungen auf Basis von Symfony und PHP', 
-                'User-Interfaces mit React',
+                'Technische Weiterentwicklung von Symfony-Applikationen im Backend mit PHP sowie im Frontend mit Javascript',
+                'Aufbau von modernen Schnittstellen mit API Platform auf Basis der aktuellen Industriestandards JSON-LD, Hydra und OpenAPI', 
+                'Single-Page-Anwendungen mit React und Aufbau von moderenen responsiven User-Interfaces',
+                'Unit- und Functional-Tests mit PHPUnit, Jest und React Testing Library',
+                'Automatisierung mit Github Actions',
             ],
         },
         {
@@ -28,9 +31,9 @@ export const cvObj: CategoryObj[] = [
             link: 'https://www.sueddeutsche.de/',
             description: [
             'Entwicklung von Landingpages (CTRs bis zu 35%) mit HTML, CSS, Javascript und Grunt in Wordpress',
-            'Deployment u.a. auf WPEngine mit Git Remote',
+            'Deployment u.a. auf WPEngine',
             'Content-Management (Tracking, Audits, Redirects)',
-            'Cookie-Management und Eventtracking mit dem Tag Manager sowie Dasbhoard-Generierung in Google Analytics',
+            'Pixel-Management und Eventtracking mit dem Google Tag Manager sowie Dasbhoard-Generierung in Google Analytics',
             'Konzeption von Wireframes mit Sketch',
             ],
         },
@@ -39,13 +42,14 @@ export const cvObj: CategoryObj[] = [
             company: 'Dr. Pfleger GmbH',
             location: 'Bamberg',
             bullets: true,
-            dateString: '04.2018 - 02.2018',
+            dateString: '02.2018 - 04.2018',
             imageName: 'drpfleger',
             link: 'https://dr-pfleger.de/',
             description: [
+            'Aktive Unterstützung beim Relaunch der Corporate Website',
             'Etablierung interner, digitaler Workflows zur fortlaufenden Content-Pflege',
             'Einarbeitung der Mitarbeiter in Typo3 „Neos“',
-            'Erstellung von Bug-Reports',
+            'Erstellung von Bug-Reports für die technische Entwicklung',
             ]
         },
         {
@@ -54,9 +58,11 @@ export const cvObj: CategoryObj[] = [
             location: 'Bamberg',
             bullets: true,
             dateString: '01.2017 - 02.2018',
+            imageName: 'boulderlounge',
+            link: 'https://www.boulderlounge-chemnitz.de/',
             description: [
             'Content-Produktion (Video, Bild und Text) für den Social- Media-Kanal der Boulderlounge in Chemnitz', 
-            'Webseiten-Erstellung in Wordpress u.a. für das Chinesische Filmfestival in Bamberg',
+            'Webseiten-Erstellung in Wordpress u.a. für das Chinesische Filmfestival in Bamberg oder die Raumausstattung Schrenk in Fürth',
             ]
         }
         ]
@@ -102,6 +108,8 @@ export const cvObj: CategoryObj[] = [
                 company: 'Udacity.com',
                 bullets: true,
                 dateString: '01.2020 - 05.2020',
+                imageName: 'udacity',
+                link: 'https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd0044',
                 description: [
                     'Programmierung von CRUD-Applikationen mit Python Flask und SQL-Alchemy',
                     'Entwicklung von REST-APIs und Authentifizierung',
@@ -113,6 +121,8 @@ export const cvObj: CategoryObj[] = [
                 company: 'Universität Bamberg',
                 bullets: false,
                 dateString: '01.2015 - 09.2018',
+                imageName: 'unibamberg',
+                link: 'https://www.uni-bamberg.de/kowi/',
                 description: [
                 'Mit dem Schwerpunkt auf Online- Massenkommunikation (Gesamtnote: 1,7)'
                 ]
@@ -122,6 +132,7 @@ export const cvObj: CategoryObj[] = [
                 company: 'Universidad Iberoamericana',
                 bullets: false,
                 dateString: '08.2013 - 05.2014',
+                location: 'Mexico City',
                 description: [
                 'Auslandsstudium für zwei Semester im Bereich politischer Kommunikation und PR.'
                 ]
@@ -131,6 +142,8 @@ export const cvObj: CategoryObj[] = [
                 company: 'Universität Bamberg',
                 bullets: false,
                 dateString: '05.2011 - 07.2015',
+                imageName: 'unibamberg',
+                link: 'https://www.uni-bamberg.de/kowi/',
                 description: [
                 'Mit den Nebenfächern BWL und Soziologie.'
                 ]
@@ -146,6 +159,9 @@ export const cvObj: CategoryObj[] = [
                 company: '121Watt, München',
                 bullets: true,
                 dateString: 'September 2019',
+                imageName: '121watt',
+                location: 'München',
+                link: 'https://www.121watt.de/seminare/technical-seo-seminar/',
                 description: [
                     'Domain-Hosting, IPs & Sitespeed',
                     'XML Sitemaps',
@@ -157,6 +173,8 @@ export const cvObj: CategoryObj[] = [
                 company: 'Google Academy',
                 bullets: true,
                 dateString: 'August 2019',
+                imageName: 'google',
+                link: 'https://analytics.google.com/analytics/academy/certificate/pNFR1EAZSbe-atsKCB52eA',
                 description: [
                     'Google Analytics Interface, Basic Reports, Campaign and Conversion Tracking',
                     'Setting up a Tag Manger, Data Layer, Variables and Events, Tags for Marketing and Remarketing'
@@ -164,9 +182,12 @@ export const cvObj: CategoryObj[] = [
             },
             {
                 jobTitle: 'Webdesign',
-                company: 'Techn. Hochschule, Regensburg',
+                company: 'Techn. Hochschule Regensburg',
                 bullets: true,
                 dateString: 'WiSe 2017/ 2018',
+                location: 'Regensburg',
+                imageName: 'regensburg',
+                link: 'https://kurse.vhb.org/VHBPORTAL/kursprogramm/kursprogramm.jsp?kDetail=true',
                 description: [
                     'HTML5, CSS-Styling und Javascript-Programme',
                     'Adobe Photoshop und Webdesign',

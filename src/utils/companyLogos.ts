@@ -1,20 +1,14 @@
-//@ts-ignore
 import logoSblum from '../assets/images/sblum.svg';
-
-//@ts-ignore
 import logoSz from '../assets/images/sz.svg';
-
-//@ts-ignore
 import drpfleger from '../assets/images/drpfleger.svg';
-
-//@ts-ignore
-import ks from '../assets/images/ks.png';
-
-//@ts-ignore
 import salewa from '../assets/images/salewa.svg';
-
-//@ts-ignore
 import adidas from '../assets/images/adidas.svg';
+import unibamberg from '../assets/images/unibamberg.svg';
+import udacity from '../assets/images/udacity.svg';
+import watt from '../assets/images/121watt.svg';
+import boulderlounge from '../assets/images/boulderlounge.svg';
+import regensburg from '../assets/images/regensburg.svg';
+import google from '../assets/images/google.svg';
 
 export function getCompanyLogo(imageName:string) {
     switch(imageName) {
@@ -24,12 +18,22 @@ export function getCompanyLogo(imageName:string) {
             return logoSz;
         case 'drpfleger': 
             return drpfleger;
-        case 'ks': 
-            return ks;
         case 'salewa': 
             return salewa;
         case 'adidas': 
             return adidas;
+        case 'unibamberg': 
+            return unibamberg;
+        case 'udacity': 
+            return udacity;
+        case '121watt': 
+            return watt;
+        case 'boulderlounge': 
+            return boulderlounge;
+        case 'regensburg': 
+            return regensburg;
+        case 'google': 
+            return google;
     }
 
     return '';

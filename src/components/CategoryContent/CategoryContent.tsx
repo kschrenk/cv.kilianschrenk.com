@@ -19,7 +19,10 @@ function CategoryContent ({ content } : CCP) {
                         <div className={'mt6 mb5 px5 flex justify-content-space-between align-items-top'}>
                             <div className={'pr4'}>
                                 <p className={'mb1 mt0'}><strong>{item.jobTitle}</strong></p>
-                                <p className={'my0 text-light'}>{item.company}{item.location && `, ${item.location}`}</p>
+                                <p className={'my0 text-light'}>
+                                    <Link href={item.link ?? ''}>{item.company}</Link>
+                                    {item.location && `, ${item.location}`}
+                                </p>
                             </div>
                             <div style={{ maxWidth: '100px', height: '40px'}}>
                                 {item.imageName && 

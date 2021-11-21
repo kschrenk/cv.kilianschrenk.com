@@ -24,7 +24,20 @@ export default function ThemeContextProvider({children}: ContextProviderProps) {
             setTheme('dark');
             console.log('👽 Dark mode is enabled');
         }
+        addThemeEventListener();
     }, []);
+
+    const addThemeEventListener = () => {
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener( 'change', e => {
+           if(e.matches) {
+            setTheme('dark');
+            console.log('switched to dark');
+           } else {
+               setTheme('light');
+               console.log('switched to light');
+           }
+        }
+    )};
 
     const value = theme;
     
