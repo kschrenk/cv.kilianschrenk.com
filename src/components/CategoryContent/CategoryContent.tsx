@@ -35,7 +35,7 @@ function CategoryContent ({ content } : CCP) {
                         <div className={'pl5 mx80'}>
                             <ul>{item.description && item.description.map(item => {
                                 return (
-                                    <li key={item}>
+                                    <li key={item} className={'mb1'}>
                                         {item}
                                     </li>
                                 );

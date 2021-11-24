@@ -96,6 +96,10 @@ const styles = StyleSheet.create({
         paddingTop: 32,
         paddingBottom: 32,
     },
+    px2: {
+        paddingLeft: 32,
+        paddingRight: 32,
+    },
     pr1: {
         paddingRight: 8,
     },
