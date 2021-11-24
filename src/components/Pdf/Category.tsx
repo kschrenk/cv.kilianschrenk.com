@@ -22,13 +22,8 @@ function Category({title, content, index}: CategoryProps) {
                         <CategoryItem
                             key={`pdf-item-${index}`}
                             index={index} 
-                            description={item.description ?? []} 
+                            item={item}
                             contentLength={categoryContentLength}
-                            company={item.company} 
-                            location={item.location}
-                            jobTitle={item.jobTitle}
-                            bullets={item.bullets}
-                            type={item.type ?? 'default'}
                         /> 
                     );
                 })}

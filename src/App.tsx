@@ -22,7 +22,7 @@ function App() {
                 </div>
             </header>
             <div className={'container flex justify-content-end'}>
-                <button className={'btn mt5'} type="button" onClick={() => setPdfView(!pdfView)}>SHOW AS PDF</button>
+                <button className={'btn mt5'} type="button" onClick={() => setPdfView(!pdfView)}>{`show as ${pdfView ? 'html' : 'pdf'}`}</button>
             </div>
             {(!pdfView && curriculum) &&
                  <div className={'container'}><CategoryMapper categoryList={curriculum} /></div>
