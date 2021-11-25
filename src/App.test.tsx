@@ -21,4 +21,10 @@ describe('<App>', () => {
         const pdfBtn = screen.getByRole('button', {name: /show as pdf/i});
         expect(pdfBtn).toBeInTheDocument();
     })
+
+    test('renders breadcrumbs', () => {
+        render(<App />);
+        expect(screen.getByRole('link', {name: /kilianschrenk.com/i})).toBeInTheDocument();
+        expect(screen.getByRole('link', {name: /cv/i})).toBeInTheDocument();
+    })
 })

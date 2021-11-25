@@ -1,10 +1,10 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type ContextProviderProps = {
     children: React.ReactNode;
 }
 
-const ThemeContext = createContext<string | undefined>(undefined);
+export const ThemeContext = createContext<string | undefined>(undefined);
 
 export function useThemeContext() {
     const context = useContext(ThemeContext);

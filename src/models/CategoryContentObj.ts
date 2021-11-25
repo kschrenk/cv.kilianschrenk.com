@@ -8,4 +8,5 @@ export default interface CategoryContentObj {
     dateString: string;
     imageName?: string;
     link?: string;
+    portfolioLink?: string;
 }

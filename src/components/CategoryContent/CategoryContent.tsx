@@ -14,7 +14,7 @@ function CategoryContent ({ content } : CCP) {
                 return (
                     <div key={`cc-${index}`} className={'border br1 mb10 pb3'}>
                         <div className={'bg-light flex justify-content-end pr4 py1 text-light'}>
-                            <span className={'font-small'}>{item.dateString}</span>
+                            <span className={'font-small'}>{`🗓 ${item.dateString}`}</span>
                         </div>
                         <div className={'mt6 mb5 px5 flex justify-content-space-between align-items-top'}>
                             <div className={'pr4'}>
@@ -27,7 +27,7 @@ function CategoryContent ({ content } : CCP) {
                             <div style={{ maxWidth: '100px', height: '40px'}}>
                                 {item.imageName && 
                                     <Link href={item.link ?? ''}>
-                                        <Image src={getCompanyLogo(item.imageName)} filter={'gray'}/>
+                                        <Image src={getCompanyLogo(item.imageName)} filter='gray' />
                                     </Link>
                                 }   
                             </div>
@@ -40,6 +40,15 @@ function CategoryContent ({ content } : CCP) {
                                     </li>
                                 );
                             })}</ul>
+                        </div>
+                        <div className={'flex px5 justify-content-end'}>
+                            {item.portfolioLink && 
+                                <Link 
+                                    href={item.portfolioLink} 
+                                    target="_self" 
+                                    customStyles={{textTransform: 'uppercase', fontSize: '0.8rem'}}
+                                >Zum Portfolio →</Link>
+                            }
                         </div>
                     </div>
                     );
