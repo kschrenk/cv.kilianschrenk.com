@@ -1,6 +1,6 @@
 # cv.kilianschrenk.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my personal cv app. See the live version on [cv.kilianschrenk.com](https://cv.kilianschrenk.com). The App was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
