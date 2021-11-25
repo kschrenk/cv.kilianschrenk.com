@@ -105,8 +105,22 @@ ul {
   max-width: 80%;
 }
 
+.mx90 {
+  max-width: 90%;
+}
+
 .mx100 {
   max-width: 100%;
+}
+
+@media (min-width: $media-md) {
+  .md-mx90 {
+    max-width: 90%;
+  }
+
+  .md-mx80 {
+    max-width: 80%;
+  }
 }
 
 .filter-gray {
