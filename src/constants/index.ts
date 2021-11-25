@@ -13,6 +13,7 @@ export const cvObj: CategoryObj[] = [
             dateString: '09.2020 - heute',
             imageName: 'sblum',
             link: 'https://sblum.de',
+            portfolioLink: 'https://kilianschrenk.com/tag/sblum/',
             description: [
                 'Objektorientierte sowie funktionale Programmierung von Webanwendungen mit PHP und JavaScript auf Basis des Symfony Frameworks',
                 'Entwicklung von responsiven User-Interfaces sowie Single-Page-Anwendungen mit React, Symfony Encore, Symfony UX und Sass',
