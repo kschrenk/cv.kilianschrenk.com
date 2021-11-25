@@ -29,11 +29,11 @@ function CategoryItem({item, contentLength, index}: CategoryItemProps) {
     return (
         <View style={contentStyle} key={`pdf-item-${index}`} wrap={false}>
             <View style={{...styles.col4}}>
-                <View style={{...styles.row, ...styles.flexDirRow}}>
+                <View style={{...styles.row, ...styles.flexDirRow, ...styles.mb1}}>
                     <Text>{item.company}</Text><Text>{item.location && `, ${item.location}`}</Text>
                 </View>
                 <View>
-                    <Text>{item.dateString}</Text>
+                    <Text style={{...styles.fontLight}}>{item.dateString}</Text>
                 </View>
             </View>
             <View style={{...styles.col6}}>

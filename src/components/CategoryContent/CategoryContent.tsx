@@ -14,7 +14,7 @@ function CategoryContent ({ content } : CCP) {
                 return (
                     <div key={`cc-${index}`} className={'border br1 mb10 pb3'}>
                         <div className={'bg-light flex justify-content-end pr4 py1 text-light'}>
-                            <span className={'font-small'}>{`🗓 ${item.dateString}`}</span>
+                            <span className={'font-small'}>{`${item.dateString}`}</span>
                         </div>
                         <div className={'mt6 mb5 px5 flex justify-content-space-between align-items-top'}>
                             <div className={'pr4'}>

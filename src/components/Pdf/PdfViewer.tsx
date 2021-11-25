@@ -24,11 +24,11 @@ function PdfViewer({categories}: pdfViewerProps) {
                         </View>
                         <View style={{ ...styles.py2, ...styles.px2 }}>
                             <View style={{...styles.mb2}}>
-                                <Text style={{...styles.fontBold }}>Kilian Schrenk</Text>
-                                <Text style={{...styles.fontNormal}}>Web-Entwickler</Text>
+                                <Text style={{...styles.fontBold, ...styles.mb1 }}>Kilian Schrenk</Text>
+                                <Text style={{...styles.fontNormal}}>Webentwickler</Text>
                             </View>
                             <View style={{...styles.fontLight, ...styles.fontSmall}}>
-                                <Text>kilianschrenk.com</Text>
+                                <Text style={{...styles.mb1}}>kilianschrenk.com</Text>
                                 <Text>kilian.schrenk@gmail.com</Text>
                             </View>
                         </View>
