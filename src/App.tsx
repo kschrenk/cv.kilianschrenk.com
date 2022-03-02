@@ -7,6 +7,7 @@ import ThemeContextProvider from './store/ThemeContextProvider';
 import CategoryObj from './models/CategoryObj';
 import Link from './common/Link';
 import Breadcrumb from './common/Breadcrumb';
+import Navigation from './components/Layout/Navigation';
 
 function App() {
     const [pdfView, setPdfView] = useState(false);
@@ -19,11 +20,7 @@ function App() {
     return (
         <>
             <ThemeContextProvider>
-                <header>
-                    <div className={'container'}>
-                        <h1>CV Kilian Schrenk</h1>
-                    </div>
-                </header>
+                <Navigation />
                 <div className={'container pt5 opacity-low'}>
                     <Breadcrumb />
                 </div>
